@@ -1,0 +1,27 @@
+## Interface: 11302
+## Title: RillyCleanUI
+## Notes: Simple skinnning modifications for the default interface to make it cleaner and unobtrusive.
+## Author: twitch.tv/emilywind - Rilona of Draenor EU
+## Email: emlywind@gmail.com
+
+## OptionalDeps: LibStub, LibSharedMedia-3.0
+
+#@no-lib-strip@
+lib\embeds.xml
+#@end-no-lib-strip@
+
+src\Common.lua
+src\Config.lua
+src\ActionBars.lua
+src\DamageFont.lua
+src\Auras.lua
+src\Buffs.lua
+src\Castbars.lua
+src\UnitFrames.lua
+src\Portrait.lua
+src\RaidFrames.lua
+src\Minimap.lua
+src\Tooltips.lua
+src\EasyDelete.lua
+src\ObjectiveTrackerFrame.lua
+src\Media.lua
