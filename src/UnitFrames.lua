@@ -135,6 +135,29 @@ hooksecurefunc("TargetFrame_CheckClassification", StyleTargetFrame)
 ------------------------
 -- PetFrame placement --
 ------------------------
+-- Happiness Backdrop
+local backdrop = {
+  bgFile = "Interface\\BUTTONS\\WHITE8X8",
+  edgeFile = nil,
+  tile = false,
+  tileSize = 32,
+  edgeSize = 1,
+  insets = {
+    left = 0,
+    right = 0,
+    top = 0,
+    bottom = 0
+  }
+}
+local CP=CreateFrame("Frame")
+CP:RegisterEvent("PLAYER_LOGIN")
+CP:RegisterEvent("UNIT_HAPPINESS")
+CP:SetScript("OnEvent", function(self, event)
+  PetFrameHappiness:SetBackdrop(backdrop)
+  PetFrameHappiness:SetBackdropColor(0,0,0,1)
+end)
+
+-- Positioning
 PetFrame:ClearAllPoints()
 PetFrame:SetPoint("TOPLEFT", PlayerFrame, "BOTTOM", -40, 20)
 
@@ -142,7 +165,7 @@ PetFrameManaBar:ClearAllPoints()
 PetFrameManaBar:SetPoint("TOPLEFT", PetPortrait, "TOPRIGHT", 2, -24)
 
 PetFrameHappiness:ClearAllPoints()
-PetFrameHappiness:SetPoint("TOPLEFT", PetFrameHealthBar, "TOPRIGHT", 4, 0)
+PetFrameHappiness:SetPoint("TOPLEFT", PetFrameHealthBar, "TOPRIGHT", 2, -1)
 
 PetFrameHealthBar:ClearAllPoints()
 PetFrameHealthBar:SetPoint("BOTTOM", PetFrameManaBar, "TOP", 0, 0)
