@@ -138,7 +138,7 @@ hooksecurefunc("TargetFrame_CheckClassification", StyleTargetFrame)
 -- Happiness Backdrop
 local backdrop = {
   bgFile = "Interface\\BUTTONS\\WHITE8X8",
-  edgeFile = nil,
+  edgeFile = "Interface\\BUTTONS\\WHITE8X8",
   tile = false,
   tileSize = 32,
   edgeSize = 1,
@@ -155,6 +155,7 @@ CP:RegisterEvent("UNIT_HAPPINESS")
 CP:SetScript("OnEvent", function(self, event)
   PetFrameHappiness:SetBackdrop(backdrop)
   PetFrameHappiness:SetBackdropColor(0,0,0,1)
+	PetFrameHappiness:SetBackdropBorderColor(0,0,0,1)
 end)
 
 -- Positioning
