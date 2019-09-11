@@ -151,7 +151,6 @@ local backdrop = {
 }
 local CP=CreateFrame("Frame")
 CP:RegisterEvent("PLAYER_LOGIN")
-CP:RegisterEvent("UNIT_HAPPINESS")
 CP:SetScript("OnEvent", function(self, event)
   PetFrameHappiness:SetBackdrop(backdrop)
   PetFrameHappiness:SetBackdropColor(0,0,0,1)
