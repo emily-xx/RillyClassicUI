@@ -77,9 +77,6 @@ CF:SetScript("OnEvent", function(self, event)
 			MinimapZoneText:Hide()
 		end
 
-		GameTimeFrame:Hide()
-		GameTimeFrame:UnregisterAllEvents()
-		GameTimeFrame.Show = kill
 		Minimap:EnableMouseWheel(true)
 		Minimap:SetScript("OnMouseWheel", function(self, z)
 			local c = Minimap:GetZoom()
